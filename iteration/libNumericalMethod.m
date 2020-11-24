@@ -7,12 +7,12 @@
 format long;
 
 % set vars
-x = 1
-precision = 0.000000001
+x = 1;
+precision = 0.000000001;
 
 % call function
-result = NumericalMethod(x, precision)
-fprintf('The final value is: %.9f\n', result)
+result = NumericalMethod(x, precision);
+fprintf('The final value is: %.9f\n', result);
 
 % function part
 % the NumericalMethod function input(x, precision), return(y)
