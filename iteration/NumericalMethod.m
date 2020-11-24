@@ -23,7 +23,7 @@ function y = NumericalMethod(x, precision)
     while true
         x = y_before;
         y = fn(x);
-        fprintf('The precision is: %.9f\n', abs(y - y_before));
+        fprintf('|y-y_before| is: %.9f\n', abs(y - y_before));
         if abs(y - y_before) < precision
             break;
 
