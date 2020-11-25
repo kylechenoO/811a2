@@ -7,7 +7,7 @@
 format long;
 
 % set vars
-x = 1;
+x = 0.35;
 precision = 0.000000001;
 
 % call function
