@@ -24,6 +24,7 @@ function y = NumericalMethod(x, precision)
     
     % initial step and start loop
     step = 0;
+    fprintf('[STEP%d][Initial][x=%.9f][y=%.9f]\n', step, x, y_before);
     while true
         % get the next y
         x = y_before;

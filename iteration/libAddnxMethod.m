@@ -1,4 +1,4 @@
-% NewtonRaphsonMethod
+% AddnxMethod
 % Written By KYLE CHEN
 % Email <kyle@hacking-linux.com>
 % Version 20201125v1
@@ -11,16 +11,17 @@ x = 0.35;
 precision = 0.000000001;
 
 % call function
-result = NewtonRaphsonMethod(x, precision);
+result = AddnxMethod(x, precision);
 fprintf('The final value is: %.9f\n', result);
 
 % function part
-% the NewtonRaphsonMethod function input(x, precision), return(y)
-function y = NewtonRaphsonMethod(x, precision)
+% the AddnxMethod function input(x, precision), return(y)
+function y = AddnxMethod(x, precision)
     % set precision and get the initial x, y_before
     precision = precision;
     x = x;
-    y_before = x - fn(x) / subs(df(), 'x', x);
+    n = subs(df(), 'x', x);
+    y_before = x - fn(x) / n;
     
     % initial step and start loop
     step = 0;
@@ -28,7 +29,7 @@ function y = NewtonRaphsonMethod(x, precision)
     while true
         % get the next y
         x = y_before;
-        y = x - fn(x) / subs(df(), 'x', x);
+        y = x - fn(x) / n;
         
         % count step and debug prt
         step = step + 1;
